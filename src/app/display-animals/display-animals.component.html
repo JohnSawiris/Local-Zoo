@@ -1,5 +1,13 @@
+<h2 label class="my-1 mr-2">Preference</h2>
+
+  <select class="custom-select my-1 mb-4 mr-sm-2" (change)="onChange($event.target.value)">
+    <option value=0>Choose...</option>
+    <option value=2>Young animals (2 years of age and less)</option>
+    <option value=3>Mature animal (Older than 2 years of age)</option>
+  </select>
+
 <div class="row">
-   <div class="col-lg-4" *ngFor="let animal of childAnimals">
+   <div class="col-lg-4" *ngFor="let animal of childAnimals | animalAge:filterByAge">
     <div class="card border-dark bg-dark mb-3">
       <div class="card-header text-white font-weight-bold text-uppercase">Species : {{animal.species}}</div>
       <div class="card-body text-white">

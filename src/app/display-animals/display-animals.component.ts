@@ -10,6 +10,12 @@ import { Animal } from './../animal.model';
 export class DisplayAnimalsComponent implements OnInit {
   @Input() childAnimals: Animal[];
 
+  filterByAge: number = 0;
+
+  onChange(option) {
+    this.filterByAge = parseInt(option);
+  }
+
   constructor() { }
 
   ngOnInit() {

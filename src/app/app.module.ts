@@ -5,13 +5,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DisplayAnimalsComponent } from './display-animals/display-animals.component';
 import { AddAnimalComponent } from './add-animal/add-animal.component';
+import { AnimalAgePipe } from './animal-age.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayAnimalsComponent,
-    AddAnimalComponent
+    AddAnimalComponent,
+    AnimalAgePipe
   ],
   imports: [
     BrowserModule
