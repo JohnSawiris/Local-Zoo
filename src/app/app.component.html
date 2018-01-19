@@ -1,4 +1,5 @@
 <div class="container">
-  <h1>{{title}}</h1>
-  <app-display-animals></app-display-animals>
+  <h1 class="text-center mt-3">{{title}}</h1>
+  <app-add-animal [childAnimals]="animals"></app-add-animal>
+  <display-animals [childAnimals]="animals"></display-animals>
 </div>

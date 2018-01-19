@@ -1,2 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import "node_modules/bootstrap/scss/bootstrap.scss";
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.6);
+  width: 100%;
+  heightL: 100%;
+  z-index: 10000000000;
+  .center {
+    width: 80%;
+    margin: 4rem auto;
+  }//center end
+  form{
+    background-color: rgba(255,255,255, 1);
+    padding: 1.5rem;
+    border-radius: 11px;
+  }//form end
+}//overlay end

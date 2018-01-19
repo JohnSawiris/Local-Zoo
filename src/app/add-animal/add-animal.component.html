@@ -1,0 +1,66 @@
+<button type="button" class="btn btn-outline-secondary mb-5 mt-3" (click)="toggle()"name="button">Add A New Animal</button>
+
+<div class="overlay" *ngIf="show">
+  <form class="center">
+    <h3 class="mb-4">Add new Animal</h3>
+    <div class="form-group">
+      <label>Species:</label>
+      <input type="text" class="form-control" placeholder="Species" #species>
+    </div>
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" class="form-control" placeholder="Name" #name>
+    </div>
+    <div class="form-group">
+      <label>Age:</label>
+      <input type="number" class="form-control" placeholder="Age" #age>
+    </div>
+    <div class="form-group">
+      <label>Diet:</label>
+      <input type="text" class="form-control" placeholder="Diet" #diet>
+    </div>
+    <div class="form-group">
+      <label>Zoo Location:</label>
+      <input type="text" class="form-control" placeholder="Zoo Location" #location>
+    </div>
+    <div class="form-group">
+      <label>Number of Caretakers:</label>
+      <input type="text" class="form-control" placeholder="Number of Caretakers" #careTakers>
+    </div>
+    <div class="form-group">
+      <label>Sex:</label>
+      <input type="text" class="form-control" placeholder="Sex" #sex>
+    </div>
+    <div class="form-group">
+      <label>Likes:</label>
+      <input type="text" class="form-control" placeholder="Likes" #likes>
+    </div>
+    <div class="form-group">
+      <label>Dislikes:</label>
+      <input type="text" class="form-control" placeholder="Dislikes" #dislikes>
+    </div>
+    <button type="button" class="btn btn-dark" name="button" (click)="addNewAnimal(
+     species.value,
+     name.value,
+     age.value,
+     diet.value,
+     location.value,
+     careTakers.value,
+     sex.value,
+     likes.value,
+     dislikes.value
+    );
+    species.value='';
+    name.value='';
+    age.value='';
+    diet.value='';
+    location.value='';
+    careTakers.value='';
+    sex.value='';
+    likes.value='';
+    dislikes.value='';
+    ">Add Animal</button>
+
+    <button type="button" class="btn btn-danger" (click)="toggle()" name="button">Close Form</button>
+  </form>
+</div>
