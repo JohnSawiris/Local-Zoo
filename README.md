@@ -4,13 +4,17 @@ This application helps user to track animals their likes, dislikes, caretakers. 
 
 ### User Story
 
-##### User can view a list of all logged animals
+#### User can view a list of all logged animals
 * Output: A list of displayed on the screen
 
-##### User enters new admitted animal
+#### User enters new admitted animal
 * Input: species, name, age, diet, location, number of caretakers, sex, likes, and dislikes.
 * Output: A new animal added to the list of animals
 
 #### User will be able to filter the animals based of the age
 * Input: Select animal's age from a dropdown
 * Output: A list of animals the match the criteria
+
+#### User is able to edit animals information
+* Input: Click Edit Animal Info button
+* Output: A form with the click animal info allowing the user to edit the info
