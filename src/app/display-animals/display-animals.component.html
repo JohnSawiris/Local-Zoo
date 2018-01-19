@@ -1,15 +1,15 @@
 <h2 label class="my-1 mr-2">Preference</h2>
 
   <select class="custom-select my-1 mb-4 mr-sm-2" (change)="onChange($event.target.value)">
-    <option value=0>Choose...</option>
+    <option value=0>Show All</option>
     <option value=2>Young animals (2 years of age and less)</option>
     <option value=3>Mature animal (Older than 2 years of age)</option>
   </select>
 
 <div class="row">
-   <div class="col-lg-4" *ngFor="let animal of childAnimals | animalAge:filterByAge">
+   <div class="col-lg-4" *ngFor="let animal of displayAnimals | animalAge:filterByAge">
     <div class="card border-dark bg-dark mb-3">
-      <div class="card-header text-white font-weight-bold text-uppercase">Species : {{animal.species}}</div>
+      <div class="card-header text-white text-uppercase">Species : {{animal.species}}</div>
       <div class="card-body text-white">
         <h5 class="card-title">Name : {{animal.name}}</h5>
         <p class="card-text">Age : {{animal.age}}</p>
@@ -20,6 +20,50 @@
         <p class="card-text">Likes : {{animal.likes}}</p>
         <p class="card-text">Dislikes : {{animal.dislikes}}</p>
       </div>
+      <button type="button" class="btn btn-info text-text mb-3 mx-4" name="Edit" (click)="editAnimal(animal)">Edit Animal Info</button>
     </div>
   </div>
+</div>
+
+<div class="overlay" *ngIf="displayShow">
+  <form class="center">
+    <div class="form-group">
+      <label>Species: </label>
+      <input type="text" class="form-control" name="Species" [(ngModel)]="childSelectedAnimal.species">
+    </div>
+    <div class="form-group">
+      <label>Name: </label>
+      <input type="text" class="form-control" name="Name" [(ngModel)]="childSelectedAnimal.name">
+    </div>
+    <div class="form-group">
+      <label>Age: </label>
+      <input type="text" class="form-control" name="Age" [(ngModel)]="childSelectedAnimal.age">
+    </div>
+    <div class="form-group">
+      <label>Diet: </label>
+      <input type="text" class="form-control" name="Diet" [(ngModel)]="childSelectedAnimal.diet">
+    </div>
+    <div class="form-group">
+      <label>Location: </label>
+      <input type="text" class="form-control" name="Location" [(ngModel)]="childSelectedAnimal.location">
+    </div>
+    <div class="form-group">
+      <label>Caretakers: </label>
+      <input type="text" class="form-control" name="Caretakers" [(ngModel)]="childSelectedAnimal.careTakers">
+    </div>
+    <div class="form-group">
+      <label>Sex: </label>
+      <input type="text" class="form-control" name="Sex" [(ngModel)]="childSelectedAnimal.sex">
+    </div>
+    <div class="form-group">
+      <label>Likes: </label>
+      <input type="text" class="form-control" name="Likes" [(ngModel)]="childSelectedAnimal.sex">
+    </div>
+    <div class="form-group">
+      <label>Disikes: </label>
+      <input type="text" class="form-control" name="Disikes" [(ngModel)]="childSelectedAnimal.dislikes">
+    </div>
+    <button type="button" class="btn btn-dark" name="Finish Editing" (click)="toggle()">Finish Edit &#10003;</button>
+    <button type="button" name="Close" class="btn btn-danger" (click)="toggle()">Close X</button>
+  </form>
 </div>

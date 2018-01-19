@@ -8,12 +8,27 @@ import { Animal } from './../animal.model';
   styleUrls: ['./display-animals.component.scss']
 })
 export class DisplayAnimalsComponent implements OnInit {
-  @Input() childAnimals: Animal[];
+
+  @Input() displayAnimals: Animal[];
+
+  @Input() displayShow: boolean;
 
   filterByAge: number = 0;
 
+  @Input() childSelectedAnimal: Animal;
+
   onChange(option) {
     this.filterByAge = parseInt(option);
+  }
+
+  editAnimal(selected) {
+    this.childSelectedAnimal = selected;
+    this.toggle();
+  }
+
+  toggle() {
+    this.displayShow = !this.displayShow;
+
   }
 
   constructor() { }

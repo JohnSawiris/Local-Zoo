@@ -1,5 +1,5 @@
 <div class="container">
   <h1 class="text-center mt-3">{{title}}</h1>
-  <app-add-animal [childAnimals]="animals"></app-add-animal>
-  <display-animals [childAnimals]="animals"></display-animals>
+  <app-add-animal [addAnimals]="animals"></app-add-animal>
+  <display-animals [displayAnimals]="animals" [childSelectedAnimal]="selectedAnimal"></display-animals>
 </div>

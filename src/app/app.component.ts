@@ -15,4 +15,8 @@ export class AppComponent {
     new Animal("Ocelot", "Prince", 4, "Carinvore", "Tropical Rain Forest Building", 6, "Male", "Laying in the sunshing", "Toys that are not rope-based"),
     new Animal("Northwest Black Tailed Deer", "Tinkerbell", 8, "Herbivore", "Northern Trail", 2, "Female", "Delicate roots and leaves", "Loud Noises")
   ];
+
+  show: boolean = false;
+
+  selectedAnimal: Animal = this.animals[0];
 }

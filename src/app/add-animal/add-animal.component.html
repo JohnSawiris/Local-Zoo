@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-outline-secondary mb-5 mt-3" (click)="toggle()"name="button">Add A New Animal</button>
+<button type="button" class="btn btn-outline-secondary mb-5 mt-3" (click)="toggleDisplay()" name="Add New Animal">Add A New Animal</button>
 
 <div class="overlay" *ngIf="show">
   <form class="center">
@@ -39,7 +39,7 @@
       <label>Dislikes:</label>
       <input type="text" class="form-control" placeholder="Dislikes" #dislikes>
     </div>
-    <button type="button" class="btn btn-dark" name="button" (click)="addNewAnimal(
+    <button type="button" class="btn btn-dark" name="Add Animal" (click)="addNewAnimal(
      species.value,
      name.value,
      age.value,
@@ -59,8 +59,8 @@
     sex.value='';
     likes.value='';
     dislikes.value='';
-    ">Add Animal</button>
+    ">Add Animal &#10003;</button>
 
-    <button type="button" class="btn btn-danger" (click)="toggle()" name="button">Close Form</button>
+    <button type="button" class="btn btn-danger" (click)="toggleDisplay()" name="Close">Close Form X</button>
   </form>
 </div>

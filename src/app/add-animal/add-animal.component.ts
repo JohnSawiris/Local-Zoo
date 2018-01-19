@@ -9,22 +9,22 @@ import { Animal } from './../animal.model';
 })
 export class AddAnimalComponent implements OnInit {
 
-  @Input() childAnimals: Animal[];
+  @Input() addAnimals: Animal[];
+
+  show: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  show: boolean = false;
-
   addNewAnimal(species, name, age, diet, location, careTakers, sex, likes, dislikes) {
     const newAnimal = new Animal(species, name, age, diet, location, careTakers, sex, likes, dislikes);
-    this.childAnimals.push(newAnimal);
-    this.toggle();
+    this.addAnimals.push(newAnimal);
+    this.toggleDisplay();
   }
 
-  toggle() {
+  toggleDisplay() {
     this.show = !this.show;
   }
 
