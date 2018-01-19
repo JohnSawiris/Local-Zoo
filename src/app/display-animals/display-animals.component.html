@@ -1,0 +1,17 @@
+<div class="row">
+   <div class="col-md-4" *ngFor="let animal of animals" style="width: 18rem">
+    <div class="card border-dark bg-dark mb-3">
+      <div class="card-header text-white font-weight-bold text-uppercase">Species : {{animal.species}}</div>
+      <div class="card-body text-white">
+        <h5 class="card-title">Name : {{animal.name}}</h5>
+        <p class="card-text">Age : {{animal.age}}</p>
+        <p class="card-text">Diet : {{animal.diet}}</p>
+        <p class="card-text">Location : {{animal.location}}</p>
+        <p class="card-text">Caretakers : {{animal.careTakers}}</p>
+        <p class="card-text">Sex : {{animal.sex}}</p>
+        <p class="card-text">Likes : {{animal.likes}}</p>
+        <p class="card-text">Dislikes : {{animal.dislikes}}</p>
+      </div>
+    </div>
+  </div>
+</div>
