@@ -11,11 +11,16 @@ export class DisplayAnimalsComponent implements OnInit {
 
   @Input() displayAnimals: Animal[];
 
-  @Input() displayShow: boolean;
+  @Input() childSelectedAnimal: Animal;
+
+  displayShow: boolean = false;
 
   filterByAge: number = 0;
 
-  @Input() childSelectedAnimal: Animal;
+  constructor() { }
+
+  ngOnInit() {
+  }
 
   onChange(option) {
     this.filterByAge = parseInt(option);
@@ -29,11 +34,6 @@ export class DisplayAnimalsComponent implements OnInit {
   toggle() {
     this.displayShow = !this.displayShow;
 
-  }
-
-  constructor() { }
-
-  ngOnInit() {
   }
 
 }

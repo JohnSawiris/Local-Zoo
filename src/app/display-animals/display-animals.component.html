@@ -26,8 +26,9 @@
 </div>
 
 <div class="overlay" *ngIf="displayShow">
-  <form class="center">
+  <form>
     <button type="button" name="Close" class="btn btn-danger" (click)="toggle()">Close X</button>
+    <h3 class="mb-4">Add new Animal</h3>
     <div class="form-group">
       <label>Species: </label>
       <input type="text" class="form-control" name="Species" [(ngModel)]="childSelectedAnimal.species">
