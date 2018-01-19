@@ -10,18 +10,18 @@ export class AnimalAgePipe implements PipeTransform {
   transform(input: Animal[], filter) {
     const output: Animal[] = [];
     if(filter >= 1 && filter <= 2) {
-      for(let i = 0; i < input.length; i++) {
-        if(input[i].age >= 1 &&input[i].age <= 2) {
-          output.push(input[i]);
+      input.map(animal => {
+        if(animal.age >= 1 && animal.age <= 2) {
+          output.push(animal);
         }
-      }
+      });
       return output;
     } else if(filter > 2) {
-      for(let i = 0; i < input.length; i++) {
-        if(input[i].age > 2) {
-          output.push(input[i]);
+      input.map(animal => {
+        if(animal.age > 2) {
+          output.push(animal);
         }
-      }
+      });
       return output;
     } else {
       return input;
