@@ -1,9 +1,9 @@
 <h2 label class="my-1 mr-2">Preference</h2>
 
   <select class="custom-select my-1 mb-4 mr-sm-2" (change)="onChange($event.target.value)">
-    <option value=0>Show All</option>
-    <option value=2>Young animals (2 years of age and less)</option>
-    <option value=3>Mature animal (Older than 2 years of age)</option>
+    <option value="0">Show All</option>
+    <option value="2">Young animals (2 years of age and less)</option>
+    <option value="3">Mature animal (Older than 2 years of age)</option>
   </select>
 
 <div class="row">
@@ -27,6 +27,7 @@
 
 <div class="overlay" *ngIf="displayShow">
   <form class="center">
+    <button type="button" name="Close" class="btn btn-danger" (click)="toggle()">Close X</button>
     <div class="form-group">
       <label>Species: </label>
       <input type="text" class="form-control" name="Species" [(ngModel)]="childSelectedAnimal.species">
@@ -64,6 +65,5 @@
       <input type="text" class="form-control" name="Disikes" [(ngModel)]="childSelectedAnimal.dislikes">
     </div>
     <button type="button" class="btn btn-dark" name="Finish Editing" (click)="toggle()">Finish Edit &#10003;</button>
-    <button type="button" name="Close" class="btn btn-danger" (click)="toggle()">Close X</button>
   </form>
 </div>

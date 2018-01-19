@@ -2,6 +2,7 @@
 
 <div class="overlay" *ngIf="show">
   <form class="center">
+    <button type="button" class="btn btn-danger" (click)="toggleDisplay()" name="Close">Close Form X</button>
     <h3 class="mb-4">Add new Animal</h3>
     <div class="form-group">
       <label>Species:</label>
@@ -60,7 +61,5 @@
     likes.value='';
     dislikes.value='';
     ">Add Animal &#10003;</button>
-
-    <button type="button" class="btn btn-danger" (click)="toggleDisplay()" name="Close">Close Form X</button>
   </form>
 </div>

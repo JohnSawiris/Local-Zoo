@@ -1,21 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
 .overlay {
+  background-color: rgba(0, 0, 0, .7);
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
-  background-color: rgba(0,0,0,0.6);
-  width: 100%;
-  heightL: 100%;
+  z-index: 100000;
+}
+form{
+  width: 60%;
+  margin: auto;
   z-index: 10000000000;
-  .center {
-    width: 80%;
-    margin: 4rem auto;
-  }//center end
-  form{
-    background-color: rgba(255,255,255, 1);
-    padding: 1.5rem;
-    border-radius: 11px;
-  }//form end
-}//overlay end
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255,255,255, 1);
+  padding: 1.5rem;
+  border-radius: 11px;
+  .btn-danger {
+    align-self: flex-end;
+  }
+  .btn-dark {
+    align-self: flex-start;
+  }
+}//form end
