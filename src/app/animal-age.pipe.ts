@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import { Animal } './animal.model';
+import { Animal } from './animal.model';
 @Pipe({
   name: 'animalAge',
   pure: false
