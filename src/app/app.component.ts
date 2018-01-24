@@ -16,5 +16,9 @@ export class AppComponent {
     new Animal("Northwest Black Tailed Deer", "Tinkerbell", 8, "Herbivore", "Northern Trail", 2, "Female", "Delicate roots and leaves", "Loud Noises")
   ];
 
+  addNewAnimal(animal) {
+    this.animals.push(animal);
+  }
+
   selectedAnimal: Animal = this.animals[0];
 }

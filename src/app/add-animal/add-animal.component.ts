@@ -9,7 +9,7 @@ import { Animal } from './../animal.model';
 })
 export class AddAnimalComponent implements OnInit {
 
-  @Input() addAnimals: Animal[];
+  @Output() addAnimal = new EventEmitter();
 
   show: boolean = false;
 
@@ -19,8 +19,10 @@ export class AddAnimalComponent implements OnInit {
   }
 
   addNewAnimal(species, name, age, diet, location, careTakers, sex, likes, dislikes) {
+
     const newAnimal = new Animal(species, name, age, diet, location, careTakers, sex, likes, dislikes);
-    this.addAnimals.push(newAnimal);
+
+    this.addAnimal.emit(newAnimal);
     this.toggleDisplay();
   }
 

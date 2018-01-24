@@ -33,7 +33,6 @@ export class DisplayAnimalsComponent implements OnInit {
 
   toggle() {
     this.displayShow = !this.displayShow;
-
   }
 
 }
