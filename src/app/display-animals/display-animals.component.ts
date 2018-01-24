@@ -13,7 +13,7 @@ export class DisplayAnimalsComponent implements OnInit {
 
   @Input() childSelectedAnimal: Animal;
 
-  displayShow: boolean = false;
+  toggleDisplay: boolean = false;
 
   filterByAge: number = 0;
 
@@ -32,7 +32,7 @@ export class DisplayAnimalsComponent implements OnInit {
   }
 
   toggle() {
-    this.displayShow = !this.displayShow;
+    this.toggleDisplay = !this.toggleDisplay;
   }
 
 }
